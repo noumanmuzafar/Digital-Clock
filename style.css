@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "popping", sans-serif;
+}
+body,
+.time,
+.left-side,
+.right-side,
+.top-right,
+.bottom-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+.clock,
+.time,
+.right-side,
+.top-right,
+.bottom-right {
+  position: relative;
+}
+.clock {
+  color: whitesmoke;
+  background: linear-gradient(45deg, #0a0a0a, #40727a);
+  width: 425px; /*This creates the box*/
+  padding: 20px 45px; /*This creates the box with some space from all the sides and also no commas exist.*/
+  border-radius: 85px;
+  box-shadow: 1px 1px 15px rgb(0, 0, 0, 1), -1px -1px 15px rgb(0, 0, 0, 1);
+}
+
+#hours {
+  font-size: 100px;
+  padding: 0px 8px; /* The "0px" will simply increase the height of the box, but actually it is increasing the distance of the "hours" element from the box */
+  line-height: 125px; /* This is also used to increase the height of the box*/
+  background: -webkit-linear-gradient(45deg, #05abc5, #ffffff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.right-side {
+  flex-direction: column;
+}
+
+#dots {
+  font-size: 70px;
+  color: rgb(24, 57, 57);
+  transform: translateY(-3px); /* It moves the dots in positive y-axis*/
+}
+#minutes {
+  font-size: 60px;
+  margin-left: 10px;
+  background: -webkit-linear-gradient(45deg, #05abc5, #ffffff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.bottom-right {
+  margin-left: 20px;
+  transform: translateY(-15px);
+}
+
+#meridian,
+#seconds {
+  font-size: 20px;
+  margin-left: 7px;
+}
+
+#meridian {
+  color: orange;
+}
+#seconds {
+  background: -webkit-linear-gradient(45deg, #05abc5, #ffffff);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
